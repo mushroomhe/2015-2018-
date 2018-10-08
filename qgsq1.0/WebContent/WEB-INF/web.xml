@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <!-- 帖子的servlet -->
+  <servlet>
+  <servlet-name>ArticleServlet</servlet-name>
+  <servlet-class>Servlet.ArticleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ArticleServlet</servlet-name>
+  <url-pattern>/articleServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 用户的servlet -->
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>Servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/userServlet</url-pattern>
+  </servlet-mapping>
+<!--   话题的servlet -->
+  <servlet>
+    <servlet-name>topicServlet</servlet-name>
+    <servlet-class>Servlet.TopicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>topicServlet</servlet-name>
+    <url-pattern>/topicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>Servlet.InitServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <display-name>qgsq1.0</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>default.html</welcome-file>
+  </welcome-file-list>
+</web-app>
